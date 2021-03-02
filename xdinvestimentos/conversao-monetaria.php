@@ -1,15 +1,13 @@
 <?php
 
+include("../funcoes.php");
+
+$answer = $_GET["moeda"];
 $real = $_GET["real"];
 $moeda = $_GET["moeda"];
 
-$answer = $_GET['moeda'];
-if ($answer == "Dólar") {
-    $resultadoDolar = $real * 5.41;
-}else if 
-    ($answer == "Euro") {
-    $resultadoEuro = $real * 6.57;
-    }
+$resultadoDolar  = conversaoMonetaria($real);
+$resultadoEuro  = conversaoMonetaria($real);
 ?>
 
 <!DOCTYPE html>

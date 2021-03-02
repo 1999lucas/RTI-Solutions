@@ -1,21 +1,13 @@
 <?php
 
+include("../funcoes.php");
+
 $nome = $_GET["nome"];
 $salario = $_GET["salario"];
 $aumentoSalario = ["aumento"];
 $juros = ["juros"];
 
-
-if ($salario > 5000) {
-    $juros = $salario * 0.1;
-    $aumentoSalario = $salario + $juros;
-
-
-}else if($salario < 5000) {
-    $juros = $salario * 0.2;
-    $aumentoSalario = $salario + $juros;
-    
-}
+$aumentoSalario = aumentoSalario($salario);
 ?>
 
 <!DOCTYPE html>

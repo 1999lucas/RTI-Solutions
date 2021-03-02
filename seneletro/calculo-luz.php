@@ -1,16 +1,12 @@
 <?php
 
+include("../funcoes.php");
+
 $nome = $_GET["nome"];
 $endereco = $_GET["endereco"];
 $consumo = $_GET["consumo"];
 
-$total = ["total"];
-
-if($consumo >120) {
-    $total = $consumo * 0.42;
-}else if($consumo <=120) {
-    $total = $consumo * 0.32;
-}
+$total = calculoLuz($consumo);
 
 ?>
 
