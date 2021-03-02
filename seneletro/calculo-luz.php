@@ -35,12 +35,15 @@ if($consumo >120) {
         echo "<h1 style='color: red'><em> $consumo KW/h</em></h1>";
     } else {
         echo "<h1 style='color: blue'><em> $consumo KW/h</em></h1>";
-        echo "Obrigado por Economizar!";
+        
     }
     ?></h1>
-    <h1>Valor a Pagar: R$ <?= number_format($total, 2, ",", "." ) ?></h1>
+    <h1>Valor a Pagar: R$ <?= number_format($total, 2, ",", "." )?> </h1>
     
-    
+    <?php if ($consumo <= 120) {
+         echo "<h1>Obrigado por Economizar!</h1>";
+    }
+    ?>
  
 
 </body>

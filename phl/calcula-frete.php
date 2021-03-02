@@ -39,6 +39,7 @@ $custoTotal = $custoPedagios + $custoDistancia;
         echo "<h1  style='color: red'>Valor dos pedágios: R$ <em $custoPedagios </em></h1>";
     } else {
         echo "<h1> Valor dos pedágios: R$ <em> $custoPedagios </em></h1>";
+        
     }
     ?>
     <h1>A Viagem de <?= $origem ?> à <?= $destino ?> irá custar o valor total de R$<em><?= number_format($custoTotal, 2, ",", ".") ?></em></h1>

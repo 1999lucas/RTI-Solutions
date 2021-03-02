@@ -29,7 +29,7 @@ if ($salario > 5000) {
 </head>
 
 <body>
-<h1>O(a) <?= $nome ?> passará a receber R$ <?= number_format($aumentoSalario, 2, ",", ".") ?></h1>
+<h1>O(a) funcionário(a) <?= $nome ?> passará a receber R$ <?= number_format($aumentoSalario, 2, ",", ".") ?></h1>
 </body>
 
 

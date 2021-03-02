@@ -3,14 +3,11 @@
 $real = $_GET["real"];
 $moeda = $_GET["moeda"];
 
-$resultadoDolar = ["resultadoDolar"];
-$resultadoEuro = ["resultadoEuro"];
-
 $answer = $_GET['moeda'];
-if ($answer == "dolar") {
+if ($answer == "Dólar") {
     $resultadoDolar = $real * 5.41;
 }else if 
-    ($answer == "euro") {
+    ($answer == "Euro") {
     $resultadoEuro = $real * 6.57;
     }
 ?>
@@ -27,11 +24,11 @@ if ($answer == "dolar") {
 <body>
 
 <h1>Valor total em <?=$answer?>:
-<h1><? if ($answer == "euro") {
-    echo "€ $resultadoEuro"; 
-}else if ($answer == "dolar") {
-    echo "US$ $resultadoDolar"
-}   ?></h1>
+<h1><?php if ($answer == "Euro") { 
+    echo "€ " .number_format("$resultadoEuro", 2, ",", "." );
+}else if ($answer == "Dólar") {
+    echo "US$ " .number_format("$resultadoDolar", 2, ",", ".");
+}   ?>
 
 </body>
 </html>
